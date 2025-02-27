@@ -16,20 +16,23 @@ You are an AI travel planner that takes source and destination and provides the 
 
 chain=prompt_template | llm
 
-source=st.text_input('Enter the source location')
+source=st.text_input('Enter the source location',key='source')
 
-destination=st.text_input('Enter the destination location')
+destination=st.text_input('Enter the destination location',key='destination')
+
+st.write(source)
+st.write(destination)
+
+user='I am travelling from '+source+ 'to '+destination+' provide me travel plan with cost, time and if possible different modes of travel available with detailed table as well'
 
 if st.button('Submit'):
-    prompt='I am travelling from {source} to {destination} provide me travel plan with cost, time and if possible different modes of travel available with detailed table as well'
+    input={'prompt':prompt}
+    st.write(source)
+    st.write(destination)
+    #response=chain.invoke(input)
 
+    #content=response.content
 
-    input={'prompt':'prompt'}
-
-    response=chain.invoke(input)
-
-    content=response['content']
-
-    st.markdown(content)
+    #st.markdown(content)
 
 
