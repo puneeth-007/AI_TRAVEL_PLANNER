@@ -26,5 +26,10 @@ if st.button('Submit'):
 
     input={'prompt':'prompt'}
 
-    st.write(chain.invoke(input))
+    response=chain.invoke(input)
+
+    content=response['content']
+
+    st.markdown(content)
+
 
