@@ -1,5 +1,4 @@
-﻿from ctypes import alignment
-import streamlit as st
+﻿import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
