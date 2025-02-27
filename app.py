@@ -20,10 +20,11 @@ source=st.text_input('Enter the source location')
 
 destination=st.text_input('Enter the destination location')
 
-prompt='I am travelling from {source} to {destination} provide me travel plan with cost, time and if possible different modes of travel available'
+if st.button('Submit'):
+    prompt='I am travelling from {source} to {destination} provide me travel plan with cost, time and if possible different modes of travel available'
 
 
-input={'prompt':'prompt'}
+    input={'prompt':'prompt'}
 
-st.write(chain.invoke(input))
+    st.write(chain.invoke(input))
 
