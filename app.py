@@ -1,9 +1,10 @@
-﻿import streamlit as st
+﻿from ctypes import alignment
+import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
 
-st.markdown('<h1 style="text-align: center;">✈️AI TRAVEL PLANNER🚄</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="text-align: center;">✈️🚗AI TRAVEL PLANNER🚄🚌</h1>', unsafe_allow_html=True)
 
 with open(r'C:\Users\punee\OneDrive\Desktop\python\Internship\key.txt.txt') as f:
     api=f.read()
@@ -27,7 +28,7 @@ if st.button('Submit'):
     response=chain.invoke(input)
 
     content=response.content
-
+    st.header('Travel Plan',divider='rainbow')
     st.markdown(content)
 
 
