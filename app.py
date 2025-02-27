@@ -21,7 +21,7 @@ source=st.text_input('Enter the source location')
 destination=st.text_input('Enter the destination location')
 
 if st.button('Submit'):
-    prompt='I am travelling from {source} to {destination} provide me travel plan with cost, time and if possible different modes of travel available'
+    prompt='I am travelling from {source} to {destination} provide me travel plan with cost, time and if possible different modes of travel available with detailed table as well'
 
 
     input={'prompt':'prompt'}
